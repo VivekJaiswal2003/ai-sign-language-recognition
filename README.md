@@ -1,4 +1,4 @@
-# 🤟 AI Sign Language Recognition System
+#  AI Sign Language Recognition System
 
 An AI-based **Sign Language Recognition System** that recognizes hand gestures in real time using **Computer Vision and Machine Learning techniques** and converts them into **text and speech output**.
 
@@ -49,22 +49,6 @@ This project uses **hand landmark detection** and **feature-based machine learni
 
 ---
 
-## Project Structure
-AI-Sign-Language-Recognition-System/
-├── asl_landmark_dataset.csv
-├── asl_label_encoder.pkl
-├── asl_scaler.pkl
-├── asl_sign_model.pkl
-├── mlp_model.pkl
-├── rf_model.pkl
-├── train.py
-├── detect.py
-├── run_detect_with_params.py
-├── mark.py
-├── tts_diag.py
-├── tts_test.py
-├── tts_wav_test.py
-└── README.md
 
 
 
@@ -82,40 +66,7 @@ AI-Sign-Language-Recognition-System/
 
 ---
 
-## How to Run the Project
 
-### Clone the Repository
-```bash
-git clone https://github.com/VivekJaiswal2003/AI-Sign-Language-Recognition-System.git
-cd AI-Sign-Language-Recognition-System
-
-
-
-Install Dependencies-
-pip install opencv-python mediapipe scikit-learn numpy pyttsx3
-
-Train the Model-
-python train.py
-
-Run Real-Time Detection-
-python detect.py
-
-
-Results
-.Accurate real-time hand gesture recognition
-.Smooth text and speech output
-.Efficient performance on standard systems
-
-Future Scope
-.Recognition of words and sentences
-.Expansion to more sign gestures
-.Deployment as a web or mobile application
-
-
-Author
-Vivek Kumar
-B.Tech – Electronics & Communication Engineering
-DCRUST University, Murthal
 
 
 

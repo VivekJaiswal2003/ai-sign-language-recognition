@@ -81,9 +81,3 @@ python main.py
 - Add more gesture classes  
 - Deploy as a web-based application  
 - Improve model accuracy  
-
-
-
-## 👨‍💻 Autho
-Vivek Kumar  
-B.Tech (ECE) | Machine Learning & DevOps Enthusiast

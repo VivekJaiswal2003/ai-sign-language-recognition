@@ -1,0 +1,228 @@
+:root {
+  --bg: #faf7ef;
+  --card: #fffdf7;
+  --ink: #2e2d2a;
+  --accent: #986b41;
+  --accent-soft: #ddc9b4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  background: radial-gradient(circle at top, #f5efe5, #f0eadf 35%, #ebe4d8);
+  color: var(--ink);
+}
+
+.calendar-page {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.wall-calendar {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #d4c4b1;
+  box-shadow: 0 20px 40px rgb(100 79 53 / 20%);
+  background: var(--card);
+  grid-template-columns: 1.2fr 1.5fr 1fr;
+}
+
+.hero-panel {
+  min-height: 360px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  height: 100%;
+  background: linear-gradient(0deg, rgb(19 14 9 / 68%), rgb(25 18 9 / 28%));
+  color: #fff;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.theme-switch {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  font: inherit;
+}
+
+.theme-switch button,
+.toolbar button,
+.notes-panel header button {
+  border: 1px solid rgb(255 255 255 / 35%);
+  background: rgb(255 255 255 / 20%);
+  color: inherit;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+.theme-switch button.active {
+  background: rgb(255 255 255 / 88%);
+  color: #2f2922;
+}
+
+.grid-panel,
+.notes-panel {
+  padding: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.weekdays {
+  margin-top: 0.8rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.calendar-grid {
+  margin-top: 0.5rem;
+  gap: 0.35rem;
+}
+
+.day-cell {
+  border: none;
+  background: #f8f3ea;
+  border-radius: 12px;
+  min-height: 72px;
+  padding: 0.35rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.day-cell small {
+  font-size: 0.65rem;
+  opacity: 0.75;
+}
+
+.day-cell.muted {
+  opacity: 0.45;
+}
+
+.day-cell.between {
+  background: var(--accent-soft);
+}
+
+.day-cell.start,
+.day-cell.end {
+  background: var(--accent);
+  color: #fff;
+}
+
+.notes-panel {
+  background: #f7f0e5;
+  border-left: 1px solid #d9c9b7;
+}
+
+.notes-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notes-panel header button {
+  background: #fff;
+  color: #322519;
+  border-color: #ccb9a4;
+}
+
+label {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+textarea {
+  min-height: 120px;
+  border-radius: 12px;
+  border: 1px solid #d0bfa9;
+  resize: vertical;
+  padding: 0.8rem;
+  font: inherit;
+  background: #fffdf9;
+}
+
+textarea:disabled {
+  background: #f3eee6;
+}
+
+.theme-forest {
+  --accent: #51724f;
+  --accent-soft: #c9d9c5;
+}
+
+.theme-night {
+  --accent: #4f5ca4;
+  --accent-soft: #cad1f0;
+}
+
+@media (max-width: 1024px) {
+  .wall-calendar {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    min-height: 240px;
+  }
+
+  .notes-panel {
+    border-left: none;
+    border-top: 1px solid #d9c9b7;
+  }
+}
+
+@media (max-width: 620px) {
+  .calendar-page {
+    padding: 0.4rem;
+  }
+
+  .grid-panel,
+  .notes-panel,
+  .hero-overlay {
+    padding: 0.8rem;
+  }
+
+  .day-cell {
+    min-height: 58px;
+    border-radius: 10px;
+  }
+
+  .toolbar h2 {
+    font-size: 1rem;
+    text-align: center;
+    flex: 1;
+  }
+}
